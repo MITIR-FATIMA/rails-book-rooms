@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  starts_at: 2024-01-16
+  ends_at: 2024-01-16
+  user: one
+  room: one
+
+two:
+  starts_at: 2024-01-16
+  ends_at: 2024-01-16
+  user: two
+  room: two
