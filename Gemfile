@@ -27,6 +27,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 gem "devise"
+gem "sassc"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
