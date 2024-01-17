@@ -1,14 +1,17 @@
-<h1>Hello Marseille</h1>
+<h1 class="text-center">****Hello Marseille****</h1>
 
 <div class="container">
     <div class="row">
           <% @hotels.each do |hotel| %>
+           <div class="col-4 col-sm-6  mb-3">
+           <%= link_to hotel_path(hotel), class:"text-white text-decoration-none text-center" do %>
             <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://st2.depositphotos.com/1000633/10782/i/450/depositphotos_107822956-stock-photo-saint-jean-castle.jpg)">
                 <strong><%= hotel.name %></strong>
 
             </div>
-            <%= link_to "Detail", hotel_path(hotel) %>
-          <% end %>
 
+            <% end %>
+           </div>
+           <% end %>
     </div>
 </div>

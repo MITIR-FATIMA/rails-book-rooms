@@ -1,12 +1,27 @@
-<div class="container">
+<div class="container ">
+   <%= link_to "Hotels List", hotels_path(@hotels) %>
+        <div class="card-product mt-5 ">
+          <img src="https://st2.depositphotos.com/1000633/10782/i/450/depositphotos_107822956-stock-photo-saint-jean-castle.jpg">
+          <div class="card-product-infos">
+            <h1><%= @hotel.name %></h1>
+            <p class="card-product-infosmes mt-5"><%= @hotel.address %></p>
+                <%= @room.capacity %>
+                <%= @room.price_per_night %>
+          </div>
+        </div>
 
-      <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('https://st2.depositphotos.com/1000633/10782/i/450/depositphotos_107822956-stock-photo-saint-jean-castle.jpg') %>)">
-          <h1><%= @hotel.name %></h1>
+          <div class="cards">
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://marseille.intercontinental.com/wp-content/uploads/sites/5/2023/02/chambre_Classic-King-vue-3-scaled-1.jpg)">
+              Chambre 1
+              <%# <%= link_to room_path(@room) %>
+            </div>
 
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://media.vogue.fr/photos/5c2f50969d636304afa12aab/master/pass/la_chambre_d_h__tes_h__tel_confidentielle_maison_empereur____marseille_7371.jpeg)">
+              Chambre 2
+            </div>
 
-      </div>
-       <p><%= @hotel.address %></p>
-        <%= @room.capacity %>
-        <%= @room.price_per_night %>
-
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.ibis-styles-marseille-saint-charles.com/wp-content/uploads/elementor/thumbs/ibis-Saint-Charles-marseille-photo-90777-piv5byuy17818iq9sprxofq4nqksc3oorcqmndcncw.jpg)">
+              Chambre 3
+            </div>
+          </div>
 </div>
