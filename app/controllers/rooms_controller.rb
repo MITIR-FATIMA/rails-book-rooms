@@ -1,18 +1,16 @@
 class RoomsController < ApplicationController
 
-   before_action :set_room, only: [:show, :edit, :update]
+   before_action :set_room, only: [:edit, :update]
 
   def index
-    @room = Room.all
     @booking = Booking.new
   end
 
-  def show
-  end
 
-  def new
-    @room = Room.new
-  end
+
+  # def new
+  #   @room = Room.new
+  # end
 
   def create
     @room = Room.new(room_params)
@@ -20,6 +18,7 @@ class RoomsController < ApplicationController
       redirect_to room_path(@room)
     else
       render :new, status: :unprocessable_entity
+    end
   end
 
 
@@ -31,6 +30,7 @@ class RoomsController < ApplicationController
       redirect_to room_path(@room)
     else
       render :edit, status: :unprocessable_entity
+    end
   end
 
   private
@@ -42,4 +42,5 @@ class RoomsController < ApplicationController
   def room_params
     params.require(:room).permit(:capacity, :price_per_night, :hotel_id)
   end
+
 end
